@@ -5,12 +5,14 @@
 
             .work{
                 width: 800px;
-                height:auto;
-                
+                height:auto;  
             }
-            .top-buffer { margin-top:75px; }
+            .top-buffer { 
+                margin-top:75px; 
+            }
 
         </style>
+        
         <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 
@@ -21,26 +23,26 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
         <script>
-        
-            function getRandomArbitrary(min, max) {
-                return Math.random() * (max - min) + min;
+
+                function getRandomArbitrary(min, max) {
+                    return Math.random() * (max - min) + min;
                 } 
 
-            document.addEventListener("DOMContentLoaded", function(event) {
-                    chooseOpacities();
-            })
+                document.addEventListener("DOMContentLoaded", function(event) {
+                        chooseOpacities();
+                });
 
-            function chooseOpacities(){
-                var images = document.getElementsByClassName("work");
-                for(var i = 0; i < images.length; i++)
-                {
-                    var temprand = Math.random(getRandomArbitrary(20,100));
-                    console.log(temprand);
-                    console.log(images[i]);
-                    images[i].style.opacity = temprand;
+                function chooseOpacities(){
+                    
+                    var images = document.getElementsByClassName("work");
+                    
+                    for(var i = 0; i < images.length; i++){
+                        var temprand = Math.random(getRandomArbitrary(20,100));
+                        images[i].style.opacity = temprand;
+                    }
+                    
                 }
-            }
-          
+
           </script>
     </head>
 
